@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0;
+  max-width: 100vw;
+
+  font-family: oswald-extralight, oswald, sans-serif;
+}
+
+img {
+  height: auto;
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+button {
+  outline: none;
+}
+.section-container {
+  width: 90%;
+  margin: auto;
+  padding-block: 70px;
+}
+
+/* homepage */
+/* nav */
+header {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  nav {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .nav_text {
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1rem;
+        padding-top: 10px;
+      }
+    }
+    .nav_links {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        font-size: 1.2rem;
+        li {
+          padding-inline: 10px;
+          border-right: 1px solid rgb(255, 255, 255);
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+    .nav_social {
+      display: flex;
+      gap: 10px;
+      a img {
+        width: 30px;
+      }
+    }
+  }
+}
+
+/* image slider */
+/* heading */
+h3 {
+  text-align: center;
+}
+/* slider container */
+.slider {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  margin: 0px auto;
+  width: 800px;
+  max-width: 100%;
+}
+/* image */
+.slide-image {
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  max-height: 400px;
+  padding: 10px;
+  margin: 0 auto;
+}
+/* paragraph holding the count and number of the images */
+p {
+  text-align: center;
+}
+/* prev and next btns */
+.btn {
+  position: absolute;
+  top: 50%;
+  font-size: 80%;
+  background-color: rgb(228, 231, 231);
+  border: solid 1px rgb(201, 199, 199);
+  padding: 5px;
+  cursor: pointer;
+}
+/* prev btn */
+.backward {
+  left: 0px;
+}
+/* next btn */
+.forward {
+  right: 0px;
+}
+.slide_bottom {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  img {
+    width: 100px;
+    height: 100px;
+    &:hover {
+      filter: grayscale(0) !important;
+    }
+  }
+}
