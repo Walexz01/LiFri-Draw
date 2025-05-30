@@ -3,16 +3,25 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  background-image: url(assets/nsplsh_221412f3e2cf42439d37d46617358330~mv2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 body {
   margin: 0;
   padding: 0;
   padding-bottom: 0;
   max-width: 100vw;
-
-  font-family: oswald-extralight, oswald, sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-img {
+img,
+video {
   height: auto;
   display: block;
   width: 100%;
@@ -25,6 +34,7 @@ h1,
 h2,
 h3 {
   margin: 0;
+  font-weight: lighter;
 }
 
 button {
@@ -42,6 +52,11 @@ header {
   background-color: #000000;
   color: rgb(255, 255, 255);
   text-align: center;
+  background-image: url(assets/ironpatern.84ec58ff.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   nav {
     padding-top: 70px;
     padding-bottom: 20px;
@@ -51,10 +66,11 @@ header {
     gap: 10px;
     .nav_text {
       h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        text-decoration: underline;
       }
       h2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding-top: 10px;
       }
     }
@@ -82,6 +98,11 @@ header {
     }
   }
 }
+.section-container h2 {
+  font-size: 3rem;
+  text-decoration: underline;
+  padding-bottom: 1rem;
+}
 
 /* image slider */
 /* heading */
@@ -94,30 +115,21 @@ h3 {
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
   margin: 0px auto;
-  width: 800px;
+  width: 80%;
   max-width: 100%;
 }
 /* image */
 .slide-image {
   width: 100%;
-  min-height: 500px;
   height: auto;
-  max-height: 400px;
+  max-height: 500px;
   padding: 10px;
   margin: 0 auto;
 }
-/* paragraph holding the count and number of the images */
-p {
-  text-align: center;
-}
-/* prev and next btns */
 .btn {
   position: absolute;
   top: 50%;
-  font-size: 80%;
-  background-color: rgb(228, 231, 231);
-  border: solid 1px rgb(201, 199, 199);
-  padding: 5px;
+  width: 60px;
   cursor: pointer;
 }
 /* prev btn */
@@ -139,4 +151,90 @@ p {
       filter: grayscale(0) !important;
     }
   }
+}
+
+/* reels video */
+#Reel_section div {
+  display: flex;
+  flex-direction: column;
+}
+.video-wrapper {
+  position: relative;
+  width: 80%;
+  align-self: center;
+}
+
+.video-wrapper > video {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.video-wrapper > video.has-media-controls-hidden::-webkit-media-controls {
+  display: none;
+}
+
+.video-overlay-play-button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px calc(50% - 50px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0.95;
+  cursor: pointer;
+  background-image: linear-gradient(transparent, #000);
+  transition: opacity 150ms;
+}
+
+.video-overlay-play-button:hover {
+  opacity: 1;
+}
+
+.video-overlay-play-button.is-hidden {
+  display: none;
+}
+
+/* illlustraction */
+
+.slide_wrap {
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.slide_show {
+  width: 860px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+}
+.slide_show .slide_img {
+  width: 5000px;
+  overflow: hidden;
+}
+
+.slide_img img {
+  border-radius: 5px;
+}
+.slide_show .slide_img > div {
+  float: left;
+  width: 280px;
+  padding: 5px;
+}
+
+.slide_btn img {
+  position: absolute;
+  width: 30px;
+  top: 50%;
+}
+.slide_btn a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.slide_btn .prev {
+  left: 10px;
+}
+.slide_btn .next {
+  right: 10px;
 }

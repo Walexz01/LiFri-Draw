@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <title>LiFri's Portfolio! | 2D Artist & Animator</title>
   </head>
   <body>
@@ -43,26 +49,47 @@
       </nav>
     </header>
     <main>
-      <!-- ============== Ilustraciones============= -->
+      <!-- ================ Ilustraciones============ -->
       <section id="Ilustraciones_section">
         <div class="section-container">
           <h2>Ilustraciones</h2>
+          <div class="slide_wrap">
+            <div class="slide_show">
+              <div class="slide_img"></div>
+            </div>
+            <div class="slide_btn">
+              <img class="prev" src="assets/icons8-arrow-100 (1).png" alt="" />
+              <img class="next" src="assets/icons8-arrow-100.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ============== Reel=============== -->
+      <section id="Reel_section">
+        <div class="section-container">
+          <h2>Reel</h2>
+          <div class="video-wrapper">
+            <video controls poster="assets/reel_video_poster.avif">
+              <source src="assets/reel.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+      <!-- ============== ¡Más animaciones!============= -->
+      <section id="¡Más animaciones!_section">
+        <div class="section-container">
+          <h2>¡Más animaciones!</h2>
           <!-- image slider -->
           <div class="slider">
             <!-- image -->
             <img class="slide-image" src="" alt="slide" />
-            <!-- the count and number of the images -->
-            <!-- <p>
-              <span class="slide-image-number"></span> of
-              <span class="total-image-number"></span>
-            </p> -->
-            <!-- previous btn -->
+
             <div class="btn backward">
-              <span class="material-icons-outlined"> chevron_left </span>
+              <img class="prev" src="assets/icons8-arrow-100 (1).png" alt="" />
             </div>
             <!-- next btn -->
             <div class="btn forward">
-              <span class="material-icons-outlined"> chevron_right </span>
+              <img class="next" src="assets/icons8-arrow-100.png" alt="" />
             </div>
           </div>
           <div class="slide_bottom"></div>
