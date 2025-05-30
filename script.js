@@ -6,19 +6,27 @@ const prevBtn = document.querySelector(".backward");
 const nextBtn = document.querySelector(".forward");
 const slide_bottom = document.querySelector(".slide_bottom");
 
-// the image array
-const images = [
-  "assets/hero_floating_image1.png",
-  "assets/Illustration_card_image .jpg",
-  "assets/Illustration_project1.jpg",
-  "assets/Illustration_project2.jpg",
+// the video array
+const videos = [
+  "assets/clown-guy.mp4",
+  "assets/moon.mp4",
+  "assets/pokeball.mp4",
+  "assets/llama.mp4",
 ];
-
-images.forEach((src) => {
+// the video array
+const videos_poster = [
+  "assets/clown-guy_cover.jpg",
+  "assets/moon_cover.jpg",
+  "assets/pokeball_cover.jpg",
+  "assets/llama_cover.jpg",
+];
+// the bottom slider image
+videos_poster.forEach((src) => {
   const bottom_image = document.createElement("img");
   bottom_image.src = src;
   bottom_image.alt = "Slide preview";
   bottom_image.classList.add("thumbnail");
+  console.log(bottom_image);
   slide_bottom.appendChild(bottom_image);
 });
 
@@ -31,7 +39,7 @@ window.addEventListener("DOMContentLoaded", showImage);
 
 // function to select and change the image details
 function showImage() {
-  image.src = images[currentImage];
+  image.src = videos[currentImage];
   slide_bottomImg.forEach((img, index) => {
     if (currentImage == index) {
       img.style.filter = "none";
@@ -44,7 +52,7 @@ function showImage() {
 // the next button function
 nextBtn.addEventListener("click", function () {
   currentImage++;
-  if (currentImage > images.length - 1) {
+  if (currentImage > videos.length - 1) {
     currentImage = 0;
   }
   showImage(currentImage);
@@ -64,7 +72,7 @@ slide_bottomImg.forEach((image, index) => {
 prevBtn.addEventListener("click", function () {
   currentImage--;
   if (currentImage < 0) {
-    currentImage = images.length - 1;
+    currentImage = videos.length - 1;
   }
   showImage(currentImage);
 });
