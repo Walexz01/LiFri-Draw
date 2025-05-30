@@ -209,6 +209,7 @@ h3 {
   overflow: hidden;
   position: relative;
   margin: 10px auto;
+  max-width: 90%;
 }
 .slide_show .slide_img {
   width: 5000px;
@@ -251,4 +252,65 @@ footer {
       width: 35px;
     }
   }
+}
+
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-image span {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 550px;
+  height: 80%;
+  object-fit: fill;
+}
+.popup-image h2 {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.popup-image .prev,
+.popup-image .next {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.popup-image .prev {
+  left: 20px;
+}
+.popup-image .next {
+  right: 20px;
 }
