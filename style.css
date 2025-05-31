@@ -317,7 +317,7 @@ footer {
 
 /* about page */
 #about_page {
-  background-color: rgba(128, 128, 128, 0.637);
+  background-color: #ceced3;
 }
 #about_description {
   text-align: center;
@@ -351,6 +351,94 @@ footer {
   max-width: 90%;
   max-height: 100%;
   margin: auto;
+}
+
+/* contact page */
+#contact_page {
+  background-color: #ceced3;
+}
+.form_header {
+  padding-top: 50px;
+  text-align: center;
+  color: #000;
+  img {
+    width: 250px;
+    max-width: 60%;
+    margin: auto;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-block: 15px;
+  }
+  p a {
+    color: #000;
+    font-size: 1.2rem;
+  }
+}
+
+form {
+  width: 500px;
+  max-width: 95%;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.input-label {
+  margin-bottom: 1rem;
+}
+
+.input-label label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.input-label input,
+.input-label textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem;
+  background-color: #a2a2a7;
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 0.4s;
+}
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+  border-color: #91aba5;
+  background-color: #91aba5;
+}
+.input-label input:focus,
+.input-label textarea:focus {
+  background-color: #ca89c3;
+  border-color: #8f5a8a;
+}
+.input-label input:hover,
+.input-label textarea:hover {
+  background-color: transparent;
+  border-color: rgb(34, 33, 33);
+  resize: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.774);
+
+  opacity: 1;
+  font-style: italic;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  user-select: none;
+}
+
+form button:hover {
+  background-color: #a2a2a7;
+  color: black;
 }
 
 /* ============= media query for 768px=============== */

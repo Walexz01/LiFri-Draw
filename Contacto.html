@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +18,7 @@
     />
     <title>LiFri's Portfolio! | 2D Artist & Animator</title>
   </head>
-  <body id="about_page">
+  <body id="contact_page">
     <header>
       <nav>
         <div class="nav_text">
@@ -49,32 +55,80 @@
       </nav>
     </header>
     <main>
-      <section id="about_description">
-        <div class="section-container">
-          <img class="LiFri_image" src="assets/LiFri2022.webp" alt="" />
-          <div class="description_text">
-            <h2>Sobre mí</h2>
+      <!-- ============== footer=============== -->
+      <section id="contact_form_section">
+        <div class="section_container">
+          <div class="form_header">
+            <img src="assets/contact_page_plane.avif" alt="" />
+            <h2>Contacto</h2>
             <p>
-              Soy un chico argentino, dibujante y animador 2D. Me dedico
-              principalmente a formar parte de producciones animadas y hacer
-              comisiones tanto de dibujo como de animaciones. Completé el curso
-              de Especialización en Animación Profesional 2D de la universidad
-              Image Campus, y mi sueño es formar parte de un estudio de
-              animación profesional en el cual producir animaciones para todo el
-              mundo.
+              <a href="mailto:lucas.2003.bsso@gmail.com"
+                >lucas.2003.bsso@gmail.com</a
+              >
             </p>
           </div>
-          <!-- =============diploma image============= -->
-          <div class="diploma_image">
-            <img src="assets/Diploma del curso.avif" alt="" />
-            <span
-              >Diploma del curso "Formación Profesional en Realización de
-              Dibujos Animados 2D" de Image Campus
-            </span>
-          </div>
+          <form action="" method="post" name="contact-form">
+            <div class="form">
+              <div class="input-label">
+                <label for="first-name">Name *</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="e.g. John"
+                  required
+                />
+              </div>
+
+              <div class="input-label">
+                <label for="last-name">Last Name *</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  placeholder="e.g. Doe"
+                  name="last-name"
+                  required
+                />
+              </div>
+
+              <div class="input-label">
+                <label for="email">E-mail *</label>
+                <input
+                  placeholder="e.g. john.doe@example.com"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div class="input-label">
+                <label for="phone">Phone *</label>
+                <input
+                  placeholder="e.g. +1 234 567 8900"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+              </div>
+
+              <div class="input-label">
+                <label for="message">Leave me a message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Type your message here..."
+                ></textarea>
+              </div>
+
+              <button type="submit">Send</button>
+            </div>
+          </form>
         </div>
       </section>
-      <!-- ============== footer=============== -->
       <footer>
         <div class="footer_social">
           <a href="https://www.instagram.com/lifri_draws/" target="_blank">
@@ -99,5 +153,10 @@
         <p>© <span class="year"> 2023 </span> Creado por Lucas Améndola con</p>
       </footer>
     </main>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="formspree.js"></script>
   </body>
 </html>
