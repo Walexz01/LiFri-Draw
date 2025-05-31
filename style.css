@@ -49,16 +49,16 @@ button {
 /* homepage */
 /* nav */
 header {
-  background-color: #000000;
   color: rgb(255, 255, 255);
   text-align: center;
   background-image: url(assets/ironpatern.84ec58ff.png);
+  background-color: #000000f1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   nav {
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -340,13 +340,14 @@ footer {
 }
 #about_description .description_text p {
   font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 #about_description .diploma_image span {
   font-size: 0.7rem;
 }
 .diploma_image img {
   width: 700px;
-  height: 400px;
   max-width: 90%;
   max-height: 100%;
   margin: auto;
@@ -354,6 +355,10 @@ footer {
 
 /* ============= media query for 768px=============== */
 @media (width<= 768px) {
+  .section-container {
+    width: 95%;
+  }
+
   .video-wrapper {
     width: 95%;
     height: auto;
@@ -388,10 +393,28 @@ footer {
       height: 60px;
     }
   }
+
+  /* about page */
+  #about_description {
+    padding-top: 30px;
+  }
+  #about_description .description_text {
+    width: 90%;
+  }
+  #about_description .description_text h2 {
+    font-size: 1.2rem;
+  }
+  #about_description .description_text p {
+    font-size: 1.5rem;
+  }
 }
 
 /* ============= media query for 425px=============== */
 @media (width<= 425px) {
+  .section-container {
+    width: 98%;
+  }
+
   .video-wrapper {
     width: 95%;
   }
@@ -455,5 +478,15 @@ footer {
   }
   .popup-image .next {
     right: 0px;
+  }
+  /* about page */
+  #about_description .description_text {
+    width: 95%;
+  }
+  #about_description .description_text h2 {
+    font-size: 2rem;
+  }
+  #about_description .description_text p {
+    font-size: 1.2rem;
   }
 }
