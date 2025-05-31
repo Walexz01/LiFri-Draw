@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
-html {
+#home_page {
   background-image: url(assets/nsplsh_221412f3e2cf42439d37d46617358330~mv2.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -313,6 +313,43 @@ footer {
 }
 .popup-image .next {
   right: 20px;
+}
+
+/* about page */
+#about_page {
+  background-color: rgba(128, 128, 128, 0.637);
+}
+#about_description {
+  text-align: center;
+  padding-top: 50px;
+}
+#about_description .LiFri_image {
+  width: 400px;
+  max-width: 90%;
+  margin: auto;
+}
+#about_description .description_text {
+  width: 60%;
+  margin: auto;
+}
+#about_description .description_text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0;
+}
+#about_description .description_text p {
+  font-size: 2rem;
+}
+#about_description .diploma_image span {
+  font-size: 0.7rem;
+}
+.diploma_image img {
+  width: 700px;
+  height: 400px;
+  max-width: 90%;
+  max-height: 100%;
+  margin: auto;
 }
 
 /* ============= media query for 768px=============== */
