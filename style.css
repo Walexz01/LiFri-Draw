@@ -302,9 +302,10 @@ footer {
   border: 5px solid #fff;
   border-radius: 5px;
   width: auto;
-  max-width: 80%;
-  height: 80%;
-  object-fit: fill;
+  height: auto;
+  /* max-width: 80%; */
+  /* object-fit: fill; */
+  aspect-ratio: 1;
 }
 .popup-image h2 {
   color: white;
@@ -606,9 +607,6 @@ form button:hover {
     font-size: 30px;
   }
 
-  .popup-image img {
-    width: 80%;
-  }
   .popup-image h2 {
     font-size: 1.5rem;
   }
