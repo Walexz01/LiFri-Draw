@@ -215,14 +215,22 @@ h3 {
 }
 .slide_show {
   width: 860px;
-  overflow: hidden;
   position: relative;
   margin: 10px auto;
   max-width: 90%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 .slide_show .slide_img {
-  width: 5000px;
+  display: inline-block;
+  scroll-snap-align: start;
+  width: 3650px;
   overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
 .slide_img img {
@@ -270,7 +278,7 @@ footer {
   background: rgba(0, 0, 0, 0.9);
   height: 100%;
   width: 100%;
-  z-index: 100;
+  z-index: 2000;
   display: none;
   justify-content: center;
   align-items: center;
@@ -293,8 +301,8 @@ footer {
   transform: translate(-50%, -50%);
   border: 5px solid #fff;
   border-radius: 5px;
-  width: 70%;
-  max-width: 550px;
+  width: auto;
+  max-width: 80%;
   height: 80%;
   object-fit: fill;
 }
@@ -511,11 +519,11 @@ form button:hover {
 
   /* slider container */
   .slider {
-    width: 90%;
+    width: 95%;
   }
   /* image */
   .slide-image {
-    width: 100%;
+    width: 90%;
     padding: 10px;
   }
   .btn {
@@ -558,6 +566,7 @@ form button:hover {
 
   .section-container h2 {
     font-size: 2.5rem;
+    padding-left: 10px;
   }
   /* illlustraction */
 
@@ -576,11 +585,11 @@ form button:hover {
 
   /* slider container */
   .slider {
-    width: 95%;
+    width: 99%;
   }
   /* image */
   .slide-image {
-    width: 100%;
+    width: 90%;
   }
   .btn {
     width: 30px;

@@ -233,4 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
       (currentIndex_popup - 1 + slides.length) % slides.length;
     showImage(currentIndex_popup);
   };
+  // footer year
+  const Footeryear = document.querySelector(".year");
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  Footeryear.textContent = year;
 });
