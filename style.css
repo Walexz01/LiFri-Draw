@@ -9,6 +9,9 @@
   background-position: center;
   background-size: cover;
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -64,6 +67,9 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    .nav_toggle {
+      display: none;
+    }
     .nav_text {
       h1 {
         font-size: 3rem;
@@ -443,6 +449,46 @@ form button:hover {
 
 /* ============= media query for 768px=============== */
 @media (width<= 768px) {
+  nav {
+    position: relative;
+    z-index: 1111;
+    padding: 0 !important;
+    padding-bottom: 20px !important;
+    .nav_toggle {
+      display: inline-block !important;
+      align-self: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70px;
+      z-index: 1111;
+    }
+    .nav_text {
+      padding-top: 40px;
+    }
+    .nav_links {
+      position: absolute;
+      height: auto;
+      background-color: #1f1f23;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: all 0.8s;
+      ul {
+        flex-direction: column;
+        padding-top: 60px;
+        li {
+          padding-inline: 0;
+          padding-block: 20px;
+          border-right: none !important;
+        }
+      }
+    }
+    .nav_links.close {
+      transform: translateX(1000px);
+    }
+  }
   .section-container {
     width: 95%;
   }
